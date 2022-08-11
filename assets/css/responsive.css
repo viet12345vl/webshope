@@ -1,0 +1,118 @@
+/*Mobile and tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header {
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: 6rem;
+        margin-top: 0;
+        width: 100%;
+    }
+    .header-with-search{
+        height: 6rem;
+    }
+    .header__cart-list::before {
+        display: none;
+    }
+    .app__container {
+        margin-top: calc(6rem + 46px);
+    }
+    .app__sort-bar {
+        display: block;
+    }
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-one-tablet{
+        display: none;
+    }
+    .header__cart {
+        margin: 0px 30px;
+    }
+}
+
+/* mobile */
+@media (max-width: 739.9px) {
+    .hide-one-mobile {
+        display: none;
+    }
+    .header__logo{
+        display: block;
+    }
+    .header__logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .header__cart {
+        margin: 0 20px;
+    }
+    .header__navbar-user-img{
+        height: 25px;
+    }
+    
+    .mobile__header-navbar-user {
+        display: block;
+    }
+    .mobile__header-bar{
+        display: block;
+    }
+    .mobile__seach {
+        display: block;
+    }
+    .header__search {
+        position: fixed;
+        right: 0;
+        top: 6rem;
+        left: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        padding: 0 12px;
+        animation: mobileFadeIn ease 0.5s;
+        display: none;
+    }
+    .mobile__search-check:checked ~ .header__search {
+        display: flex;
+    }
+    .header__search-history {
+        position: fixed;
+        top: calc(6rem + 46px);
+        left: 0;
+        right: 0;
+    }
+    @keyframes mobileFadeIn {
+        from{
+            top: 3rem;
+            opacity: 0;
+        }
+        to{
+            top: 6rem;
+            opacity: 1;
+        }
+    }
+    .mobile__search-check {
+        width: 34px;
+    }
+    .pagination-item {
+        margin: 0 0px;
+    }
+    .footer-list {
+        padding-left: 12px;
+    }
+    .pagination {
+        padding-left: 5px;
+    }
+}
+
